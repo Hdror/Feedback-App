@@ -2,7 +2,7 @@
 @import "setup/variables.scss";
 @import "setup/functions.scss";
 @import "setup/mixins.scss";
-// @import "setup/typography.scss";
+@import "setup/typography.scss";
 
 // Basics
 @import "basics/helpers.scss";
@@ -12,3 +12,4 @@
 // Compenents
 @import "components/app-header.scss";
 @import "components/serch-bar.scss";
+@import "components/feedback-modal.scss";

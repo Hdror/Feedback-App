@@ -1,0 +1,94 @@
+.feedback-modal {
+    width: 348px;
+    font-family: f-regular;
+    font-size: rem(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+    background-color: $clr1;
+    padding: 41px;
+    transition: height 3s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 37px;
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    .modal-header {
+        height: 24px;
+        color: $clr2;
+        line-height: 24px;
+        align-items: center;
+        margin-block-end: 18px;
+        font-family: f-semiBold;
+        font-size: 1rem;
+    }
+
+    .yes-no-container {
+        margin-block-end: 10px;
+        font-size: 1rem;
+        > div {
+            cursor: pointer;
+            img {
+                margin-inline-end: 6px;
+            }
+            &:first-child {
+                margin-inline-end: 42px;
+                img {
+                    padding-inline-start: 1px;
+                }
+            }
+        }
+        // > div:first-child {
+        //     margin-inline-end: 42px;
+        //     img {
+        //         padding-inline-start: 1px;
+        //     }
+        // }
+
+        p {
+            line-height: 1.3125;
+        }
+
+        // img {
+        //     margin-inline-end: 6px;
+        // }
+    }
+    .textarea-container {
+        position: relative;
+        margin-block-end: 40px;
+        height: 174px;
+
+        textarea {
+            background-color: $clr4;
+            height: 100%;
+            resize: none;
+            border: none;
+            padding: 12px;
+            line-height: 1.3125;
+            color: $clr5;
+            font-family: f-regular;
+        }
+        textarea::placeholder {
+            white-space: nowrap;
+            width: 160px;
+        }
+
+        .skip-submit-container {
+            position: absolute;
+            top: 182px;
+            right: 0;
+            align-items: center;
+            p {
+                margin-inline-end: 12px;
+            }
+            .submit-btn {
+                padding: 5.5px 12px;
+                background-color: $clr6;
+                color: $clr1;
+            }
+        }
+    }
+}
