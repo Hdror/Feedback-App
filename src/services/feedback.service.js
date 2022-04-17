@@ -1,8 +1,10 @@
-
+import { httpService } from './http.service.js'
 const axios = require('axios')
 
 export const feedbackService = {
-   getFeedbacks,
+    getFeedbacks,
+    save,
+    remove
 }
 
 
@@ -16,6 +18,25 @@ export async function getFeedbacks() {
         console.log('Error getting feedbacks:', err)
     }
 }
+
+// export async function add(d) {
+//     return httpService.post('/feedback', d)
+// }
+
+function remove(feedbackId) {
+    return httpService.delete(`feedback/${feedbackId}`)
+}
+
+function save(feedback) {
+    console.log('feedback in stayService', feedback);
+    if (feedback.id) {
+      // EDIT
+      return httpService.put(`feedback/${feedback.id}`, feedback)
+    } else {
+      // ADD
+      return httpService.post('feedback', feedback)
+    }
+  }
 
 
 

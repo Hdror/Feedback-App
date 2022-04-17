@@ -1,0 +1,41 @@
+.user-feedback{
+    h1{
+        padding-block-end: 30px;
+        margin-block-end: 20px;
+        box-shadow: 0 1px 0 $clr3;
+        font-family: f-book;
+    }
+    .feedback-card{
+        padding: 20px 30px;
+        border: 1px solid $clr3;
+        box-shadow: rgb(0 0 0 / 10%) 0px 5px 13px;
+        border-radius: 12px;
+        position: relative;
+        .edit-icon{
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 30px;
+            top: 20px;
+            height: 30px;
+            width: 30px;
+            padding: 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover{
+                background-color: $clr9;
+            }
+        }
+        .feedback-content{
+            margin-block-end: 10px;
+        }
+        .date-time-container{
+            display: flex;
+            gap: 10px;
+            font-size: rem(12px);
+            color: $clr12;
+        }
+
+    }
+}

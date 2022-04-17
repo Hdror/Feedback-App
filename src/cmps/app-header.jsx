@@ -8,11 +8,11 @@ class _AppHeader extends React.Component {
         <div className="main-header flex">
 
           <div className="logo" onClick={() => this.props.history.push("/")}>
-          My Catalog
+         Feature Space 
           </div>
           <nav className="main-nav">
             <NavLink activeClassName="active" className="clean-link" exact to="/">Home</NavLink>
-            <NavLink activeClassName="active" className="clean-link" to="/favorite">Favorites</NavLink>
+            <NavLink activeClassName="active" className="clean-link" to="/my-feedback">My Feedback</NavLink>
           </nav>
         </div>
       </header>

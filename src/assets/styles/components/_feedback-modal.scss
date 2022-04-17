@@ -12,7 +12,6 @@
     z-index: 5;
     background-color: $clr1;
     padding: 41px;
-    transition: height 3s;
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 37px;
     border: 0.5px solid rgba(118, 118, 118, 0.28);
     border-radius: 12px;
@@ -31,8 +30,18 @@
         font-size: 1rem;
         > div {
             cursor: pointer;
+            &:hover {
+                img {
+                    filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(695%) hue-rotate(158deg)
+                        brightness(115%) contrast(78%);
+                }
+            }
             img {
                 margin-inline-end: 6px;
+                &.active {
+                    filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(695%) hue-rotate(158deg)
+                        brightness(115%) contrast(78%);
+                }
             }
             &:first-child {
                 margin-inline-end: 42px;
@@ -41,25 +50,15 @@
                 }
             }
         }
-        // > div:first-child {
-        //     margin-inline-end: 42px;
-        //     img {
-        //         padding-inline-start: 1px;
-        //     }
-        // }
 
         p {
             line-height: 1.3125;
         }
-
-        // img {
-        //     margin-inline-end: 6px;
-        // }
     }
     .textarea-container {
         position: relative;
-        margin-block-end: 40px;
-        height: 174px;
+        height: 0px;
+        visibility: hidden;
 
         textarea {
             background-color: $clr4;
@@ -70,6 +69,13 @@
             line-height: 1.3125;
             color: $clr5;
             font-family: f-regular;
+            &:focus{
+                // background-color: blueviolet;
+                visible{
+                    outline: -webkit-focus-ring-color auto 1px
+                    // outline: blue;
+                }
+            }
         }
         textarea::placeholder {
             white-space: nowrap;
@@ -78,16 +84,43 @@
 
         .skip-submit-container {
             position: absolute;
+            opacity: 0;
             top: 182px;
             right: 0;
             align-items: center;
             p {
                 margin-inline-end: 12px;
+                color: $clr7;
+                cursor: pointer;
             }
             .submit-btn {
                 padding: 5.5px 12px;
-                background-color: $clr6;
-                color: $clr1;
+                background-color: $clr8;
+                color: $clr10;
+                transition: ease-in-out 85ms;
+                cursor:not-allowed;
+                &.on {
+                    background-color: $clr6;
+                    color: $clr1;
+                    transition: ease-in-out 85ms;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.active {
+            visibility: visible;
+            height: 174px;
+            transition: ease-in-out 0.3s;
+            transition: 0.3s cubic-bezier(0, 0, 1, 1);
+            &.textarea-container {
+                margin-block-end: 40px;
+            }
+            .skip-submit-container {
+                opacity: 1;
+                transition: ease-in-out 0.5;
+                transition: 0.3s cubic-bezier(1, 0, 0, 1);
+                transition-delay: 0.5s;
             }
         }
     }

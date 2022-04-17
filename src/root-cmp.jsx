@@ -2,10 +2,11 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import { AppHeader } from './cmps/app-header.jsx'
 import { HomePage } from './pages/home-page.jsx'
+import {UserFeedback} from './pages/user-feedback.jsx'
 import { toggleModal } from './store/modal.action.js'
 
-import { AppHeader } from './cmps/app-header.jsx'
 // import { AppFooter } from './cmps/app-footer.jsx'
 
 export class _RootCmp extends React.Component {
@@ -15,7 +16,7 @@ export class _RootCmp extends React.Component {
       <>
         <AppHeader />
         <Switch>
-          {/* <Route component={StayEdit} path="/stay-edit/:stayId" /> */}
+          <Route component={UserFeedback} path="/my-feedback"/>
           <Route component={HomePage} exact path="/" />
         </Switch>
         <div onClick={() => { this.props.toggleModal() }} className={this.props.isModalOpen ? "screen open" : "screen"}></div>
