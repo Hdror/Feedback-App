@@ -17,24 +17,19 @@ export const FeedbackModal = (props) => {
 
 
     useEffect(() => {
-        if (props.feedback) {
+         if (props.feedback) {
             console.log(props.feedback);
             onWasHelpful(props.feedback.wasHelpful)
             setTextareaValue(props.feedback.comment)
-        }
+         }
     }, [])
-
-    const f = () => {
-        textareaEl.current.focus()
-    }
 
     const onWasHelpful = (isHelpful) => {
         if (!isTextareaOpen) {
             setTextareaState(true)
         }
         setIsPageHelpful(isHelpful)
-
-        f()
+        textareaEl.current.focus()
     }
 
     const onSubmitFeedback = () => {
@@ -78,7 +73,5 @@ export const FeedbackModal = (props) => {
                 <div onClick={() => onSubmitFeedback()} className={textareaValue.length ? "submit-btn on" : "submit-btn"}>Submit</div>
             </div>
         </div>
-
-
     </div>
 }

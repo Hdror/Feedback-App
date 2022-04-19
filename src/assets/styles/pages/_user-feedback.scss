@@ -1,41 +1,49 @@
-.user-feedback{
-    h1{
+.user-feedback {
+    h1 {
         padding-block-end: 30px;
-        margin-block-end: 20px;
+        margin-block-end: 30px;
         box-shadow: 0 1px 0 $clr3;
         font-family: f-book;
     }
-    .feedback-card{
+    .feedback-card {
         padding: 20px 30px;
         border: 1px solid $clr3;
         box-shadow: rgb(0 0 0 / 10%) 0px 5px 13px;
         border-radius: 12px;
         position: relative;
-        .edit-icon{
-            position:absolute;
+        margin-block-end: 15px;
+        :where(.edit-icon, .remove-icon) {
+            position: absolute;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            right: 30px;
-            top: 20px;
             height: 30px;
             width: 30px;
             padding: 7px;
+            top: 15px;
+            justify-content: center;
+            align-items: center;
             border-radius: 50%;
+            transition: ease-out 0.3s;
             cursor: pointer;
-            &:hover{
+            &:hover {
                 background-color: $clr9;
+                transition: ease-in-out 0.3s;
             }
         }
-        .feedback-content{
+        .edit-icon {
+            right: 30px;
+
+        }
+        .remove-icon {
+            right: 61px;
+        }
+        .feedback-content {
             margin-block-end: 10px;
         }
-        .date-time-container{
+        .date-time-container {
             display: flex;
             gap: 10px;
             font-size: rem(12px);
             color: $clr12;
         }
-
     }
 }

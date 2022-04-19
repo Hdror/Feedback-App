@@ -45,4 +45,15 @@ export function updateFeedback(feedback) {
     }
   }
 }
-// const stayToSave = await stayService.save(stay)
+
+export function removeFeedback(feedbackId) {
+  return async (dispatch) => {
+    try {
+      await feedbackService.remove(feedbackId)
+      await storageService.remove(USER_STORAGE_KEY, feedbackId)
+      dispatch({ type: 'REMOVE_FEEDBACK', feedbackId })
+    } catch (err) {
+      console.log('Cannot remove feedback', err)
+    }
+  }
+}

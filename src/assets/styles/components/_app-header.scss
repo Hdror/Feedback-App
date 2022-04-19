@@ -1,14 +1,24 @@
-.app-header{
+.app-header {
     height: 70px;
     background-color: $clr7;
+    background-color: #316adec9;
     color: $clr1;
 
-    .main-header{
+    .main-header {
         justify-content: space-between;
         align-items: center;
-
-        a{
-            padding-inline-start: 20px;
+        .logo {
+            cursor: pointer;
+            font-family: f-regular;
+            font-size: rem(20px);
+        }
+        a {
+            padding: 10px;
+            border-radius: 6px;
+            &:hover {
+                background-color: $clr11;
+                transition: ease-in-out 0.3s;
+            }
         }
     }
 }
