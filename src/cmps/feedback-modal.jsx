@@ -18,7 +18,6 @@ export const FeedbackModal = (props) => {
 
     useEffect(() => {
          if (props.feedback) {
-            console.log(props.feedback);
             onWasHelpful(props.feedback.wasHelpful)
             setTextareaValue(props.feedback.comment)
          }

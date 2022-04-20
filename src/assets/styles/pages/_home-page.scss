@@ -1,33 +1,64 @@
 .home-page {
-    background-color: $clr7;
     background-color: #316adec9;
-   
+    background-color: $clr13;
+
     .banner {
         position: relative;
         padding: 60px 30px 0;
         height: 60vh;
-        // background-color: #d2d3e082;
         margin: auto;
         border-radius: 12px;
-        font-size: 4vw;
+        font-size: 3.5vw;
+        word-spacing: 1px;
         color: $clr1;
         text-align: center;
-        font-family:f-medium;
+        font-family: f-medium;
+        text-shadow: 0 0 0.5px #f0f0f0a6;
 
+        span {
+            color: $clr6;
+            text-shadow: 0 0 0.5px $clr6;
+        }
+        p {
+            font-family: f-regular;
+            font-size: 2.2vw;
+            position: absolute;
+            line-height: 1.5;
+            top: 110px;
+            left: 6%;
+
+            @include for-tablet-layout {
+                font-size: 1.8vw;
+                left: 10%;
+                top: 150px;
+            }
+            @include for-normal-layout {
+                left: 15%;
+            }
+        }
 
         .add-btn {
             position: absolute;
             left: 50%;
-            bottom: 30px;
-            transform: translate(-50%,0%);
+            bottom: 150px;
+            font-size: rem(12px);
+            @include for-narrow-layout {
+                bottom: 70px;
+                font-size: 1rem;
+            }
+            transform: translate(-50%, 0%);
             padding: 12px;
             color: $clr1;
             background-color: $clr6;
             width: fit-content;
             margin-block-end: 20px;
             cursor: pointer;
-            font-size: 1rem;
-
+            transition: ease-in-out 0.3s;
+            &:hover{
+                box-shadow: 0 0 0 $clr1;
+                box-shadow: 0px 0px 4px 1px #ffffff;
+               transition: ease-in-out 0.3s;
+            }
         }
     }
 }

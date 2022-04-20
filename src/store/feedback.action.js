@@ -19,13 +19,10 @@ export function loadFeedbacks() {
 
 export function addFeedback(feedback) {
   return (dispatch) => {
-    console.log(feedback);
     feedbackService.save(feedback)
       .then((savedFeedback) => {
         storageService.post(USER_STORAGE_KEY, savedFeedback)
         dispatch({ type: 'ADD_FEEDBACK', feedback: savedFeedback })
-
-
       })
       .catch((err) => {
         console.log('Cannot add feedback', err)
