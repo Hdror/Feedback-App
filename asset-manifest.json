@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Feedback-App/static/css/main.0adf3a57.css",
+    "main.js": "/Feedback-App/static/js/main.59f41d2e.js",
+    "static/media/TitilliumWeb-Regular.ttf": "/Feedback-App/static/media/TitilliumWeb-Regular.e53e0538893d432e0635.ttf",
+    "static/media/TitilliumWeb-SemiBold.ttf": "/Feedback-App/static/media/TitilliumWeb-SemiBold.d4d3eeb6e2367e6796c3.ttf",
+    "static/media/TitilliumWeb-Bold.ttf": "/Feedback-App/static/media/TitilliumWeb-Bold.a267a8b6b783d7d62039.ttf",
+    "static/media/AirbnbCerealBook.woff": "/Feedback-App/static/media/AirbnbCerealBook.d42c6a4d011ab55732b2.woff",
+    "static/media/AirbnbCerealMedium.woff": "/Feedback-App/static/media/AirbnbCerealMedium.8a9ee95760624b68a412.woff",
+    "static/media/AirbnbCerealLight.woff": "/Feedback-App/static/media/AirbnbCerealLight.b23120006d8eb043d64a.woff",
+    "static/media/thumbs-up.svg": "/Feedback-App/static/media/thumbs-up.347b908ea85159da7929407dd94d1001.svg",
+    "static/media/thumbs-down.svg": "/Feedback-App/static/media/thumbs-down.2977df92e0a697bb18568e3a3be2266e.svg",
+    "index.html": "/Feedback-App/index.html",
+    "static/media/remove.svg": "/Feedback-App/static/media/remove.4dae7c38f22605855ae1f3a7320f90dc.svg",
+    "static/media/edit.svg": "/Feedback-App/static/media/edit.cd9465470f030201759b7e4540473411.svg",
+    "main.0adf3a57.css.map": "/Feedback-App/static/css/main.0adf3a57.css.map",
+    "main.59f41d2e.js.map": "/Feedback-App/static/js/main.59f41d2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0adf3a57.css",
+    "static/js/main.59f41d2e.js"
+  ]
+}
