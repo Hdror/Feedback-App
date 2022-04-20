@@ -1,7 +1,5 @@
 function loadFromStorage(key) {
-  console.log('kukibaluki');
     var val = localStorage.getItem(key)
-    console.log(val);
     return val ? JSON.parse(val) : null
   }
   

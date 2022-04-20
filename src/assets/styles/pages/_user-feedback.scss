@@ -5,6 +5,9 @@
         box-shadow: 0 1px 0 $clr3;
         font-family: f-book;
     }
+    h3 {
+        text-align: center;
+    }
     .feedback-card {
         padding: 20px 30px;
         border: 1px solid $clr3;
@@ -31,7 +34,6 @@
         }
         .edit-icon {
             right: 30px;
-
         }
         .remove-icon {
             right: 61px;

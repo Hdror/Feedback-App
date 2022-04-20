@@ -28,18 +28,15 @@ export const UserFeedback = () => {
         else dispatch(toggleModal('feedbackModal'))
     }
 
-    const onRemoveFeedback = (feedbackId)=>{
-        console.log(feedbackId);
+    const onRemoveFeedback = (feedbackId) => {
         dispatch(removeFeedback(feedbackId))
     }
 
-
-    if (!userFeedback.length) return <h1>loading</h1>
     return <main className="user-feedback main-container page">
         <section>
             <h1>Your Latest Feedback</h1>
             <div className="feedback-list">
-                {userFeedback.map(feedback => {
+                {!!userFeedback.length && userFeedback.map(feedback => {
                     return <div key={feedback.id} className="feedback-card">
                         <div className="edit-icon" onClick={() => onModalOpen(feedback.id)} title="Edit">
                             <img src={edit} alt="" />
@@ -58,6 +55,7 @@ export const UserFeedback = () => {
                             <FeedbackModal feedback={feedback} />}
                     </div>
                 })}
+                {(!userFeedback.length) && <h3>Your Feedback list is currently empty</h3> }
             </div>
         </section>
     </main>
