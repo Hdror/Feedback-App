@@ -2,7 +2,7 @@
 One page application built with: React Classes, Hooks, SASS and redux/thunk.
 
 ## Description
-This app gathering a page Feedback and leting you adit them.
+This app gathering a page Feedback and letting you edit them.
 git hub pages link: https://hdror.github.io/Feedback-App/#/
 
 ## Getting Started with Create React App
